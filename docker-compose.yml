@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  camera-app:
+    build: .
+    image: jetson-camera-app
+    container_name: jetson_camera
+    runtime: nvidia
+    
+    # --- ADD THESE LINES FOR INTERACTIVE INPUT ---
+    stdin_open: true   # Equivalent to -i
+    tty: true          # Equivalent to -t
+    
+    # Change command to run your new script
+    command: python3 video_feed.py
+    
+    devices:
+      - /dev/video0:/dev/video0
+    volumes:
+      - .:/app
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
