@@ -53,7 +53,7 @@ def main():
         return
 
     # --- STEP 2: SETUP MODEL & OUTPUT ---
-    model_path = "yolov8n.pt"
+    model_path = "yolov8n.engine"
     output_filename = get_unique_filename("output")
     
     print(f"\n[INFO] Source: {video_source}")
