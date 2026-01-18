@@ -111,6 +111,7 @@ jtop
 | File | Description |
 | :--- | :--- |
 | `video_feed.py` | **Main Script:** Handles camera input, YOLO detection, counting logic, and video saving. |
+| `yolov8n.pt` | **AI Model:** The default YOLOv8 Nano model (COCO). **Note:** You can swap this for larger models (e.g., `yolov8s.pt`) for better accuracy, or export to TensorRT (`.engine`) for maximum Jetson optimization. |
 | `setup.sh` | **Installer:** Automated script to install Docker, Nvidia Runtime, and dependencies. |
 | `docker-compose.yml` | **Config:** Defines the container settings, GPU access, and devices. |
 | `Dockerfile` | **Build:** Blueprint for building the AI environment (Python + YOLO + Libraries). |
