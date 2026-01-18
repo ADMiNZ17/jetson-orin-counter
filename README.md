@@ -54,7 +54,7 @@ Once logged into your Jetson terminal, follow these steps to set up the entire e
 Download the project code to your Jetson.
 ```bash
 # Clone the repo into a folder named 'counter_ws'
-git clone [https://github.com/ADMiNZ17/jetson-orin-counter.git](https://github.com/ADMiNZ17/jetson-orin-counter.git) counter_ws
+git clone https://github.com/ADMiNZ17/jetson-orin-counter.git counter_ws
 
 # Enter the directory
 cd counter_ws
@@ -67,7 +67,8 @@ I have provided a "One-Click" script (setup.sh) that will:
 - Install jtop (System Monitor)
 - Configure GPU permissions
 - Set up necessary folders
-- Run these commands:
+
+Run these commands:
 ```bash
 chmod +x setup.sh
 sudo ./setup.sh
